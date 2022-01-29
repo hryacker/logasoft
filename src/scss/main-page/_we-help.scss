@@ -1,0 +1,88 @@
+section#we-help{
+    padding-top: 70px;
+    min-height: 620px;
+    position: relative;
+    @include md-block{
+        min-height: auto;
+        padding-top: 20px;
+    }
+    @include sm-block{
+        text-align: center;
+    }
+    @include xs-block{
+        padding-top: 55px;
+        min-height: auto;
+    }
+    
+    &::before{
+        @include from(1441px){
+            content:  url(../img/fast-and-simple-ws.png);   
+            position: absolute;
+            top: -29px;
+            left: 80px
+        }
+        @include md-block{
+           content: none;          
+        }     
+        content:  url(../img/rectangle-help-photo.png);   
+        position: absolute;
+        bottom: 0;
+        font-size: 0;        
+        z-index: -1;
+        
+    }
+    &::after{        
+        @include md-block{
+            position: relative;
+            display: block;
+            content:  url(../img/girl-help-mob2.png);
+            background: linear-gradient(268deg, #FFA841 44.34%, #8A19E1 98.85%);
+            margin-top: 35px;
+            text-align: center;
+            font-size: 0;   
+        }   
+    }
+
+    .content{
+        @include col();
+        @include size(6);
+        @include size-md(11);
+        @include size-sm(12);
+        margin-left: auto;
+        padding-left: 65px;
+        @include sm-block{
+            padding-left: 0;            
+        }
+        @include xs-block{
+            width: 100%;
+        }
+    }
+
+    h2{
+        @include xs-block{
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+    }
+    
+    p{
+        margin-bottom: 35px;
+        @include t1;
+        @include sm-block{
+            width: 100%;
+        }
+        @include xs-block{
+            margin-bottom: 35px;
+            @include h3-mobile;
+        }
+    }
+
+    .actions >*{
+        margin-left: 0;
+        @include sm-block{
+            margin: 0 auto;
+        }
+    }
+
+}
+

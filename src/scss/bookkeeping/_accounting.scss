@@ -1,0 +1,62 @@
+.accounting-bkp{
+    @include sm-block{
+        padding-top: 50px;
+    }
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .container{
+        @include sm-block{
+            padding-top: 0;
+            padding-bottom: 0;
+            background: none;
+        }
+        position: relative;
+        padding-top: 45px;
+        padding-bottom: 50px;
+        background: url(../img/headphone.png) top right 15px no-repeat;
+
+        &::after{
+            @include sm-block{
+                // position: absolute;
+                content: '';
+                width: 300px;
+                height: 310px;
+                display: block;
+                background: url(../img/headphone.png) top right 15px/cover no-repeat;
+            }
+        }
+    }
+    
+    h2{
+        @include size(6);
+        @include size-sm(12);
+        @include size-xs(12);
+        margin-bottom: 75px;
+    }
+    
+    .accounting-list{
+        @include size(5);
+        @include sm-block{
+            width: 100%;
+            margin-bottom: 15px;
+        }        
+        @include t1-including-mobile;
+        margin-bottom: 50px;
+    }
+
+    li{
+        display: flex;
+        align-items: center;
+        min-height: 63px;
+        img{
+            @include sm(margin-right, 20px);
+            margin-right: 25px;
+        }
+    }
+
+    li + li{
+        @include sm(margin-top, 30px);
+        margin-top: 40px;
+    }
+}

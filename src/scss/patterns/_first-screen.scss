@@ -1,0 +1,88 @@
+.first-screen{ 
+
+    @include p1;
+    box-sizing: border-box;
+
+
+    h1{
+        @include size(9);
+        @include size-xs(12);
+        
+        .modify{
+            color: $violet;
+        }
+
+        @include sm-block{
+            width: 100%;
+            margin-bottom: 40px;
+        }
+    }    
+
+    .sub-title{
+        @include size(5);
+        @include size-sm(12);
+        margin-bottom: 55px;
+    }
+
+    .directions{
+        margin-bottom: 50px;
+        color: #3C3A3A;
+        @include p1;        
+        @include sm-block{
+            margin-bottom: 65px;
+            font-size: 20px;
+            line-height: normal;
+        }
+        @include xs-block{
+            font-size: 14px;
+        }
+        
+        p{
+            margin-bottom: 15px;
+            @include xs-block{
+                @include size(7);
+                @include h3-mobile;
+            }
+        }
+    }
+
+    .directions-list{
+        max-width: 50%;
+        @include xs-block{ line-height: 17px; }
+
+        li{
+            position: relative;
+            padding-left: 25px;
+            @include xs-block{ padding-left: 20px; }
+        }
+        
+        li::before{
+            @include sm-block{
+                width: 16px;
+                height: 16px;
+                top: 1px;
+            }
+            @include text-width-triangle-center;
+            top: 8px;
+            left: 0;
+        }
+
+        li + li{
+            @include xs-block{ margin-top: 15px; }
+        }
+    }
+
+    .actions{
+        display: flex;
+        flex-wrap: wrap;
+        
+        * + *{
+            margin-left: 30px;
+            @include xs-block{
+                margin-top: 25px;
+                margin-left: 0;            
+            }
+        }
+    }
+
+}

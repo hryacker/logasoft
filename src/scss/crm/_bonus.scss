@@ -1,0 +1,75 @@
+.bonus{
+    @include sm-block{
+        padding-top: 50px;
+    }
+    padding-top: 75px;
+
+    .content{
+        @include sm-block{
+            min-height: 605px;
+            padding-top: 35px;
+            background: url(../img/bonus-mobile.png) bottom center no-repeat;
+        } 
+        min-height: 440px;
+        padding-top: 60px;
+        background: url(../img/bonus.png) top 30px right no-repeat;
+    }
+}
+
+.bonus-tabs{
+    @include sm-block{
+        @include h3-mobile;
+    } 
+    @include p2;
+    display: flex;
+    border-bottom: 1px solid #c4c4c4;
+
+    .tablinks{
+        position: relative;
+        padding: 10px 0;
+        cursor: pointer;
+        transition: color .3s;
+
+        @include animate-link-from-center;
+
+        & + .tablinks{
+            @include sm-block{
+                margin-left: 40px;
+
+            }   
+            margin-left: 45px;
+        }
+    }
+}
+
+.bonus-list{
+    @include size(5.4);
+    @include size-sm(12);
+    @include size-xs(12);
+    @include sm-block{
+        padding-left: 5px;
+    }
+    @include t1-including-mobile;
+    display: none;
+    
+    &.active{
+        display: block;
+    }
+
+    li{
+        position: relative;
+        padding-left: 50px;
+        @include sm-block{
+            padding-left: 30px;
+        }
+
+        &::before{
+            
+            @include text-width-triangle-top;
+        }
+
+        & + li{
+            margin-top: 30px;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+.for-bg-crm{
+    padding-top: 65px;
+    background: url(../img/rectangle-grey-right-ws.svg) calc(50% - 740px) 70px no-repeat;
+    @include md-block{
+        background: none;
+    }
+    @include sm-block{
+        padding-top: 50px;
+    }
+}
+
+.cost__crm{
+    @include sm-block{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+
+    .cost-info{
+        padding: 0;
+        @include sm-block{
+            background: #F5F5F5;
+            padding-top: 30px;
+            padding-bottom: 45px;
+        }        
+    }
+    .cost{
+        @include size(4);
+
+        .sub-cost{
+            font-size: 14px;
+            flex-basis: 100%;
+            @include sm-block{
+                font-size: 16px;
+            }
+        }
+    }
+
+    .actions{
+        @include sm-block{
+            a{
+                width: 265px;
+                height: 55px;
+            }
+        }
+        @include xs-block{
+            margin: 0;
+        }
+    }
+}

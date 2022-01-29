@@ -1,0 +1,142 @@
+.survey{
+    padding-bottom: 70px;
+    @include sm-block{
+        display: block;
+        padding-bottom: 50px;
+        // margin: 0;
+    }
+
+    .col-one{
+        @include col();
+        @include size(5);
+        @include size-sm(12);
+        @include t1-including-mobile;
+        @include sm-block{
+            margin-bottom: 40px;
+        }
+    }
+
+    .survey__heading{
+        @include t2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 25px;
+        @include xs-block{
+            @include t1-mobile;
+        }
+
+        p{
+            align-self: flex-end;
+
+        }
+    }
+
+    .count{
+        @include xs-block{
+            flex-basis: 100%;
+        }
+    }
+
+    .current-num{
+        font-size: 48px;
+        line-height: 59px;
+        @include xs(font-size, 29px);
+ 
+    }
+    .total-num{
+        font-size: 24px;
+        @include xs(font-size, 16px);
+    }
+
+    .col-two{
+        @include col();
+        @include size(6);
+        @include size-md(7);
+        @include size-sm(12);
+        @include size-xs(12);
+        @include t2;    
+        margin-left: auto;
+        padding-top: 20px;
+        padding-left: 65px;
+        @include md(padding-left, 0);
+        @include xs-block{
+            padding-top: 0px;
+        }
+
+    }
+
+    label{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 65px;
+        padding-left: 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+        transition: transform .3s;
+        cursor: pointer;
+
+        & + label{
+            margin-top: 10px;
+        }
+
+        &:hover{
+            transform: scale(103%);
+            @include md-block{
+                transform: none;
+            }
+        }
+    }
+
+    input{
+        position: relative;
+        width: 25px;
+        height: 25px;
+        margin: 0 20px;
+        background: transparent;
+
+        &::before{
+            position: absolute;
+            content: '';
+            display: block;
+            width: 17px;
+            height: 17px;
+            background: #fff;;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            left: 1px;
+            top: 1px;
+            z-index: 1;            
+        }
+        
+        &:checked::before{
+            background: $violet;
+        }
+
+        &::after{
+            position: absolute;
+            content: '';
+            background: #fff;
+            border: 1px solid $violet;
+            border-radius: 50%;
+            display: block;
+            width: 23px;
+            height: 23px;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    .fields-wrapper{
+        margin-bottom: 40px;
+    }
+
+    .btn{
+        @include xs-block{
+            margin: 0 auto;
+        }
+    }
+
+}

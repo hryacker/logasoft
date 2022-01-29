@@ -1,0 +1,61 @@
+.first-screen.software{
+    position: relative;
+    background: none;
+    min-height: 650px;
+    padding-top: 100px;
+    @include sm-block{
+        padding-top: 25px;
+        padding-bottom: 50px;
+        min-height: auto;
+    }
+
+    &::before{
+        @include sm-block{
+            height: calc(100% + $space_between_firScr_and_pageTop_mobile);
+            background: url(../img/soft3.png) right 20px no-repeat, linear-gradient(189.75deg, #FFFFFF 14.87%, #F4F4F4 62.25%);
+        }
+        @include xs-block{background-position-x: center, 0} 
+        content: '';
+        position: absolute;
+        background: url(../img/bg-software.png) no-repeat, linear-gradient(189.75deg, #FFFFFF 14.87%, #F4F4F4 62.25%);
+        background-position: calc(50% + 310px) 20px, 0 0;
+        width: 100%;
+        height: calc(100% + $space_between_firScr_and_pageTop);
+        bottom: 0;
+        z-index: -1;
+        animation-name: Appearance;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(.5, 0.01, 0.58, 0.46);
+    
+        @keyframes Appearance {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+    }
+
+    h1{
+        @include size-sm(6);
+        @include sm-block{
+            margin-bottom: 15px;
+        }
+    }
+
+    p{
+        @include size(6);
+        @include size-sm(7);
+        @include sm-block{@include t1-including-mobile; margin-bottom: 170px;}
+        @include xs-block{
+            width: 180px;
+            margin-bottom: 210px;
+        }
+        margin-bottom: 65px;
+    }
+
+    .actions{
+        a{
+            @include sm-block{
+                margin: 0 auto;
+            }
+        }
+    }
+}

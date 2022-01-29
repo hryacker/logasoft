@@ -1,0 +1,196 @@
+
+.header-nav{
+    @include col;
+    @include sm-block{
+        position: fixed;
+        overflow: auto;
+        width: 100%;
+        height: calc(100% - 65px);
+        top: 65px;
+        margin: 0;
+        background: #fafafa;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform .3s ease 0s, opacity .3s ease 0s;
+
+        &.active{
+            transform: translateX(0%);
+            opacity: 1; 
+        }
+
+        .contact-info-mob{
+            display: block;
+            text-align: right;
+            margin-top: 50px;
+            padding: 0 10px;
+            a {
+                display: block;
+            }
+        }
+
+    }
+    @include xs-block{
+        margin: 0;
+    }
+
+    .nav-list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include sm-block{
+            display: block;            
+            padding: 0 15px;
+
+            li+li{
+                margin-left: 0;
+            }
+
+            li{
+                position: relative;
+        
+                &:first-child{
+                    border-top: 1px solid #c4c4c4;            
+                }
+        
+                & + li{
+                    border-top: 1px solid #c4c4c4;
+                }
+                
+            }
+
+            > li > a{
+                padding-bottom: 15px;
+            }
+            
+            .sub-menu{
+                position: static;
+                padding: 0 0 0 10px;
+                width: auto;
+                box-shadow: none;
+
+                li{
+                    border-bottom: 0;
+                }
+            }
+
+            .menu-item-has-children{
+                > a {
+                    display: inline-flex;
+                }
+            }
+
+            > .menu-item-has-children{
+                padding: 0;
+            }            
+
+            .menu-item-has-children {
+                &:hover > .sub-menu{
+                    display: none;
+                }        
+            }
+
+            a:after{
+                content: none;
+            }
+
+            .menu-item-has-children .pseudo-icon{
+                background: url("../img/triangle-small.svg") center no-repeat;        
+                width: 30px;
+                height: 15px;
+                cursor: pointer;
+                display: block;        
+                transition: transform .5s; 
+            }
+            
+            .menu-item-has-children.active > a .pseudo-icon{
+                transform: rotate(90deg);
+            }
+            
+        }
+
+        .sub-menu{ 
+            position: absolute;
+            display: none;           
+            background: #fafafa;
+            width: max-content;
+            top: 0;
+            left: 100%;            
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-bottom: 2px;
+            box-shadow: 0px 0px 5px rgba(138, 25, 225, 0.7);
+            z-index: 10;
+
+
+            li{
+                margin-left: 0;
+                border-bottom: 1px solid #c4c4c4;
+
+                &:last-child{
+                    border-bottom-color: transparent;
+                }
+            }
+
+            a{            
+                padding: 15px 0;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        > .menu-item-has-children > .sub-menu{
+            padding-top: 5px;
+            top: 100%;
+            left: 0;
+        }
+
+        li{
+            position: relative;
+    
+            & + li{
+                margin-left: 70px;
+            }        
+            
+        }
+
+        > li{
+            padding-bottom: 3px;
+        }
+
+        > li > a .pseudo-icon{
+            display: none;
+        }
+
+        a{
+            padding: 15px 0;
+            position: relative;
+        }
+    }
+    
+    .menu-item-has-children .pseudo-icon{
+        background: url("../img/triangle-small.svg") center no-repeat;        
+        width: 30px;
+        height: 15px;
+        cursor: pointer;
+        display: block;        
+        transition: transform .5s; 
+    }
+    
+        
+    .contact-info-mob{
+        display: none;
+    }
+
+    .menu-item-has-children {
+        &:hover > .sub-menu{
+            display: block;
+        }        
+    }
+
+    a{
+        display: flex;
+        @include animate-link-from-center;
+    } 
+}
+
+

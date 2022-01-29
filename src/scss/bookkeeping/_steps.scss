@@ -1,0 +1,25 @@
+.cost__one-s{
+    @include sm-block{
+        padding-bottom: 0;
+    }
+    padding-bottom: 70px;
+
+    h2{
+        margin-bottom: 55px;
+    }
+
+    .steps{
+        @include sm-block{
+            padding-bottom: 20px;
+        }
+        padding-bottom: 85px;
+    }
+
+    .cost-info{
+        @include sm-block{
+            padding-bottom: 60px;
+        }
+        background: $light-grey;
+    }
+
+}

@@ -1,0 +1,10 @@
+.pult__services{
+    padding-top: 75px;
+    background: none;
+
+    .actions{
+        >*{
+            @include xs-block{margin: 0 auto;}
+        }
+    }
+}

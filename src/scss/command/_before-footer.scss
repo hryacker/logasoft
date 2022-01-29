@@ -1,0 +1,58 @@
+section#before-footer.bf-vacancy{
+    @include sm-block{padding-top: 40px;}
+    padding-top: 65px;
+
+    >.container{
+        @include sm-block{
+            background: none;
+        }
+        background: url(../img/control.png) top 0px right no-repeat;
+    }
+
+    
+    >.container::after{
+        @include sm-block{
+            margin-top: 50px;
+        }
+    }
+
+    .before-footer__content{
+        @include sm-block{
+            min-height: auto;
+        }
+        min-height: 520px;
+    }
+
+    h3{
+        @include size(8);
+        @include size-sm(12);
+        @include size-xs(12);
+        font-size: 56px !important;
+        line-height: 61px;
+        @include sm-block{        
+            font-size: 40px;
+            line-height: normal;
+        }    
+        @include xs-block{        
+            @include h1-mobile;
+        }
+    }
+
+    .h2{
+        @include size(6);
+        @include size-sm(12);
+        @include size-xs(12);
+
+        @include sm-block{
+            margin-bottom: 35px;
+        }
+        color: $violet;
+        margin-bottom: 55px;
+    }
+
+    .btn{
+        @include sm-block{
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,104 @@
+.pult{
+    padding-top: 50px;
+    @include sm-block{
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    background: linear-gradient(0deg, #FFFFFF 14.87%, #F4F4F4 62.25%);
+    padding-bottom: 80px;
+    box-sizing: border-box;
+
+    h2{
+        @include sm-block{
+            margin-bottom: 35px;
+        }
+        margin-bottom: 65px;
+
+        .modify{
+            color: $violet;
+        }
+    }
+
+    .pult-row{
+        @include row-flex;
+        justify-content: flex-end;
+        position: relative;        
+
+        &::after{
+            position: absolute;
+            display: block;
+            content: url(../img/pult2.png);
+            left: 15px;
+
+            @include md-block{
+                content: url(../img/pult.png);
+                left: -60px;
+            }
+            @include sm-block{
+                content: '';
+                position: relative;
+                background: url(../img/pult.png) right no-repeat;
+                margin-right: auto;
+                margin-top: 45px;
+                left: 0;
+                width: 448px;
+                height: 265px;
+            }
+        }
+    }
+
+    .pult-content{
+        @include col;
+        @include size(7);
+        @include size-sm(12);
+        @include size-xs(12);
+        @include md-block{
+            padding-left: 65px;
+        }
+        @include sm-block{
+            padding: 0;
+        }
+        padding-top: 30px;
+        padding-left: 85px;        
+
+    }
+
+    .pult-list{        
+        @include sm-block{
+            margin-bottom: 50px;
+            padding-left: 5px;
+        }
+        @include t1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        li{
+            @include size(5.3);
+            @include size-md(12);
+            @include sm-block{margin-bottom: 0;}
+            position: relative;            
+            padding-left: 35px;
+            margin-bottom: 45px;
+            
+            &::before{
+                @include text-width-triangle-top;
+                @include sm-block{
+                    top: 7px;
+                }
+            }
+
+            & + li{
+                @include sm-block{
+                    margin-top: 40px;
+                }
+            }
+
+            .modify{
+                @include p4;
+            }
+        }
+    }
+    
+}

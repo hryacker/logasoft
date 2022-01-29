@@ -1,0 +1,100 @@
+.cases{
+    padding-top: 95px;
+    padding-bottom: 80px;
+    @include sm-block{
+        padding-bottom: 50px;
+    }
+
+    h2{
+        margin-bottom: 65px;
+        @include size(8);
+        @include size-sm(12);
+        @include xs-block{
+            width: 100%;
+            margin-bottom: 45px;
+            font-size: 28px;
+        }
+    } 
+    
+    .pane + .pane{
+        margin-top: 25px;
+    }
+    
+    .case, .organization, .solution, .pane-title .case{
+        @include col();            
+        @include xs-block{
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    .pane-title .case{
+        @include size(4);
+        @include size-sm(4.5);
+        @include xs-block{
+            flex-basis: 100%;
+            font-size: 9px;
+            margin-bottom: 7px;
+        }
+        
+    }
+
+    
+    .organization{
+        @include size(6);
+        @include size-sm(6.5);
+        @include size-xs(10);
+        @include sm-block{padding: 0;}
+        @include xs-block{
+            @include h3-mobile;                
+        }
+        padding: 15px 0;
+        
+    }
+    
+    .task{
+        @include size(4);
+        @include size-sm(4.5);
+        @include xs-block{
+            flex-basis: 40%;
+        }           
+    }
+
+    .solution{
+        @include size(5.3);
+        @include size-md(7);
+        @include size-sm(7.5);
+        @include xs-block{                
+            flex-grow: 1;
+            margin-left: 5px;
+            margin-right: 0;
+        }
+    }
+
+    .actions{
+        @include size(3);
+        @include size-md(4);
+        @include md-block{
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;                
+
+        }
+        @include xs-block{
+            margin-top: 50px;
+        }
+        margin-left: auto;
+        margin-top: auto;
+
+        a{
+            width: auto;
+        }
+
+        button{
+            width: 100%;
+        }
+    }
+ 
+}
+

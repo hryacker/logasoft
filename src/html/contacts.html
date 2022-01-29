@@ -1,0 +1,126 @@
+@@include('templates/header.html', {title: 'Контакты'})
+        <div id="bread-crumbs">
+            <div class="container">
+                <ul class="bread-crumbs-list">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="#" class="current-page">Контакты</a></li>
+                </ul>
+            </div>              
+        </div>
+        <main id="page-contacts">
+            <section class="first-screen-contacts">
+                <div class="container">
+                    <h1 class="animate-heading">Контакты</h1>
+                </div>
+                <div class="contacts-wrapper container">
+                    <div class="tabs towns-tabs">
+                        <div class="tablinks active" data-tab_town="spb">Санкт-Петербург</div>
+                        <div class="tablinks" data-tab_town="vologda">Вологда</div>
+                    </div>
+                    <div class="content contacts__content">
+                        <div id="contacts__content-map"></div>
+                        <div id="spb" class="contacts-box active">
+                            <div class="contacts-info">
+                                <div class="contacts-address">195112, Заневский пр., д.30, корп.2, офис 204</div>
+                                <div class="contacts-phone"><a href="tel:88005007834">8-800-500-78-34</a></div>
+                                <div class="contacts-mail"><a href="mailto:sale@logasoft.ru">sale@logasoft.ru</a></div>
+                            </div>
+                            <div class="social-share">
+                                <ul class="social-share-list">
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-facebook.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-instagram.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-telegram.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-vk.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-twitter.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                        
+                        <div id="vologda" class="contacts-box">
+                            <div class="contacts-info">
+                                <div class="contacts-address">160002, ул. Гагарина, д.26</div>
+                                <div class="contacts-phone"><a href="tel:8172231010">(8172) 23-10-10</a></div>
+                                <div class="contacts-mail"><a href="mailto:info@logasoft.ru">info@logasoft.ru</a></div>
+                            </div>
+                            <div class="social-share">
+                                <ul class="social-share-list">
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-facebook.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-instagram.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-telegram.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-vk.svg" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="img/share-twitter.svg" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>                        
+                    </div>                        
+                </div>
+            </section>
+            <section id="before-footer" class="bf-control">
+                <div class="container">
+                    <div class="before-footer-content">
+                        <h2 class="animate-heading">Управляйте компанией с нами</h2>
+                        <p class="sub-heading">Решение - для вашего бизнеса, поддержка для вас.</p>
+                        <form id="form-control" action="">
+                            <label>
+                                Имя
+                                <input type="text" name="name" placeholder="">
+                            </label>
+                            <label>
+                                Телефон
+                                <input type="text" name="phone" placeholder="+ 7 911 000 00 00">
+                            </label>
+                            <label>
+                                Ваш вопрос
+                                <textarea name="question" id="" cols="30" rows="10"></textarea>
+                            </label>
+                            <button class="btn btn-accent-1">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+@@include('templates/footer.html')
+        <script src="https://api-maps.yandex.ru/2.1/?apikey=33178eb9-cf9f-4a0d-9e88-82ebfafc43e7&lang=ru_RU"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>      
+        <script src="js/script.js"></script>        
+    </body>
+</html>

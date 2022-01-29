@@ -1,0 +1,7 @@
+.survey-fresh{
+    .survey-row{
+        @include from(1441px){
+            background: url(../img/girl.png) left top no-repeat;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.steps-crm{
+    
+    h2{
+        @include size(11);
+        @include size-xs(12);
+        margin-bottom: 75px;
+    }
+
+    .steps-list{
+        @include sm-block{
+            margin-bottom: 0;
+        }
+        margin-bottom: 150px;
+    }
+}

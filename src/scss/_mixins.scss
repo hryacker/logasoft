@@ -1,0 +1,252 @@
+
+
+@mixin button-accent-1 {
+    background: $violet;
+    filter: drop-shadow(0px 4px 20px rgba(138, 25, 225, 0.7));
+}
+
+@mixin button-accent-2 {
+    background: $orange;
+    filter: drop-shadow(0px 4px 20px rgba(255, 168, 65, 0.7));
+}
+
+@mixin button-outline {
+    background: #fff;
+    border: 1px solid $violet;
+    color: $violet;
+    filter: none;
+
+    &:hover{
+        box-shadow: 0px 4px 20px rgba(132, 0, 234, 0.28);
+    }
+}
+
+@mixin animate-swipe($background, $color: #fff) {
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 140%;
+        height: 105%;
+        background: $background;
+        transform: translateX(-110%);
+        transition: transform 350ms linear;
+        z-index: -1;
+    }
+      
+    &:hover {
+        color: $color;
+        // transition: color 150ms linear;
+        &:before {
+        transform: translateX(-10%);
+        transition: transform 350ms linear;
+    
+        }
+    }
+}
+
+@mixin animate-link-from-center(){
+    &:after {
+        display: block;
+        content: "";
+        background-color: $violet;
+        height: 3px;
+        width: 0%;
+        top: 100%;
+        left: 50%;
+        border-radius: 5px;
+        position: absolute;
+        -webkit-transition: width .3s ease-in-out;
+        -moz--transition: width .3s ease-in-out;
+        transition: width .3s ease-in-out;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    &:hover:after,
+    &:focus:after, &.active:after {
+        width: 100%;
+    }
+}
+
+@mixin font-header{
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+@mixin h1{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+}
+
+@mixin h1-mobile {
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 33px;
+}
+
+@mixin h1-including-mobile{
+    @include xs-block{
+        @include h1-mobile;
+    }
+}
+
+
+@mixin h3{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+}
+
+@mixin h3-mobile{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;    
+}
+
+@mixin h3-including-mobile{
+    @include h3;
+    @include xs-block{
+        @include h3-mobile;
+    }
+}
+
+
+@mixin p1{
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0.3px;
+}
+
+@mixin p2{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: normal;
+}
+
+@mixin p4{
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 33px;    
+}
+
+
+@mixin t1 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+@mixin t1-mobile{
+    font-size: 13px;
+    line-height: 17px;
+}
+
+@mixin t1-including-mobile{
+    @include t1;
+    @include xs-block{
+        @include t1-mobile;
+    }
+}
+
+@mixin t2 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+@mixin t3 {
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@mixin t4{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+@mixin list-style-triangle{
+    position: absolute;
+    content: '';
+    background: url("../img/triangle.svg");
+    width: 15px;
+    height: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+}
+
+@mixin list-style-triangle-va-middle{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../img/triangle.svg");
+    width: 15px;
+    height: 20px;
+}
+
+@mixin text-width-triangle-center{
+    position: absolute;
+    content: '';
+    background: url("../img/triangle.svg") no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 20px;
+    top: 7px;
+    left: 0px;
+}
+
+@mixin text-width-triangle-top{
+    position: absolute;
+    content: '';
+    background: url("../img/triangle.svg") no-repeat;
+    background-size: contain;
+    width: 15px;
+    height: 20px;
+    top: 0;
+    left: 0;
+}
+
+@mixin text-width-plus(){
+    content: '';
+    background: url("../img/plus.svg") center no-repeat;
+    margin-left: 10px;
+    background-size: contain;
+    width: 35px;
+    height: 35px;
+}
+
+@mixin absolute-center{
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin menu-item-has-children-pseudo($width: 15px, $height: 15px){
+    background: url("../img/triangle-small.svg") center no-repeat;        
+    width: $width;
+    height: $height;
+    cursor: pointer;
+    display: block;        
+    transition: transform .5s; 
+}
+
+
+/*------- UI КОМПОНЕНТЫ ------- */
+
+@mixin pane($min-height){
+    display: flex;
+    min-height: $min-height;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+    border-radius: 8px;
+}
+
+/*------- UI КОМПОНЕНТЫ КОНЕЦ ------- */

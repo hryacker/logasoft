@@ -1,0 +1,95 @@
+.about-command{
+    @include sm-block{padding-bottom: 40px;}
+    padding-bottom: 65px;
+
+    .max-width{
+        @include from(1441px){
+            padding-left: 165px;
+        }
+        @include from-to(1110px, 1440px){
+            padding-left: calc((100% - 1110px) / 2);
+        }        
+        @include md-block{ 
+           padding-left: $fields;
+        }
+        @include xs-block{ 
+           padding-left: $fields_xs;
+        }
+        padding-left: $fields;
+        overflow: hidden;
+    }
+    
+    h3{
+        @include sm-block{ font-size: 26px;margin-bottom: 20px;}
+        @include xs-block{ @include p2; line-height: normal}
+        @include h1;
+        margin-bottom: 45px;
+        
+        .modify{
+            color: $violet;
+        }
+    }
+
+    .we-profi{
+        @include col;
+        @include size(4.4);
+        @include size-md(6);
+        @include size-sm(12);
+        @include sm-block{margin-bottom: 20px;}
+        @include t1-including-mobile;
+    }
+
+    .slider{
+        @include col;
+        @include size(7.6);
+        @include size-md(6);
+        @include size-sm(12);
+        @include md-block{
+            padding-left: 0;
+        }        
+        // @include sm-block{
+        //     transform: none;
+        //     margin-bottom: 50px;
+        // }
+        // transform: translateX(40px);
+        padding-left: 60px;   
+    }
+
+    .swiper-wrapper{
+        margin-bottom: 40px;
+    }
+    
+    .swiper-slide{
+        @include md-block{
+            max-width: 385px;
+        }         
+        @include p2;
+        max-width: 445px;
+    }
+    
+    .item__icon{
+        max-width: 100%;       
+        margin-bottom: 20px;
+        border-radius: 8px;
+        cursor: pointer;    
+    }
+
+    .name{
+        margin-bottom: 5px;
+    }
+
+    .function{
+        color: $violet;
+    }
+
+    .swiper-slide:not(.swiper-slide-active):hover{
+        img{
+            box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.7);
+        }
+    }
+
+    .slider-nav{
+        @include sm-block{text-align: center;}
+        text-align: right;
+    }
+}
